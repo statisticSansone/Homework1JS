@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Homework1</title>
+</head>
+<body>
+    <canvas id="panel" width="822" height="506"></canvas>
+	<script>
+		const panel = document.getElementById('panel');
+		const context = panel.getContext('2d');
+		
+		context.fillStyle = 'black';
+		context.fillRect(0,0,panel.width,panel.height);
+		
+		//Draw a point
+		context.fillStyle = 'yellow';
+		context.fillRect(250,10,2,2);
+		
+		//Draw a line
+		context.strokeStyle = 'white';
+		context.lineWidth = 2;
+		context.beginPath();
+		context.moveTo(200,20);
+		context.lineTo(200,200);
+		context.stroke();
+		
+		//Draw a rectangle
+		context.strokeStyle = 'blue';
+		context.lineWidth = 2; 
+		context.strokeRect(60,200,100,20);
+		
+		//Draw a circle
+		context.strokeStyle = 'red';
+		context.lineWidth = 2;
+		context.beginPath();
+		context.arc(105,95,75,0,Math.PI*2);
+		context.stroke();
+	</script>
+</body>
+</html>
